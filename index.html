@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luís Rodrigues</title>
+  <meta name="description" content="Luís Rodrigues — writing, code, and projects.">
+  <link rel="canonical" href="https://goblindegook.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Luís Rodrigues">
+  <meta property="og:title" content="Luís Rodrigues">
+  <meta property="og:description" content="Luís Rodrigues — writing, code, and projects.">
+  <meta property="og:url" content="https://goblindegook.github.io/">
+  <meta name="twitter:card" content="summary">
+  <style>
+    @font-face {
+      font-family: "Alice";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("fonts/alice-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: "Alice";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("fonts/alice-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    @font-face {
+      font-family: "Playfair Display";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("fonts/playfair-display-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: "Playfair Display";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("fonts/playfair-display-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    :root {
+      color-scheme: light;
+      --bg: #ede8da;
+      --text: #2a2420;
+      --muted: #726b5e;
+      --accent: #9c4a2e;
+      --rule: rgba(42, 36, 32, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Alice", ui-serif, Georgia, serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      max-width: 36rem;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 5rem 2.25rem;
+      border-left: 1px solid var(--rule);
+    }
+
+    @media (max-width: 30rem) {
+      body { padding: 3rem 1.25rem 3.5rem 1.5rem; }
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: var(--text);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.2em;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 2.6rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.6rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0 0 3rem;
+      max-width: 30ch;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: grid;
+      grid-template-columns: 1.6rem 1fr;
+      column-gap: 0.75rem;
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    nav li:last-child { padding-bottom: 0; }
+
+    .mark {
+      color: var(--muted);
+      font-size: 1.15em;
+      line-height: 1.6;
+    }
+
+    nav a {
+      font-size: 1.1rem;
+    }
+
+    nav a.pkg {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 1rem;
+      font-style: normal;
+    }
+
+    nav p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0.15rem 0 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luís Rodrigues</h1>
+    <p>Writing at <a href="https://goblindegook.com" rel="me">goblindegook.com</a>, code at <a href="https://github.com/goblindegook" rel="me">github.com/goblindegook</a>.</p>
+  </header>
+
+  <main>
+    <nav aria-label="Projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <span class="mark" aria-hidden="true">*</span>
+          <div>
+            <a href="https://littlefoot.js.org/">littlefoot</a>
+            <p>jQuery-free footnotes.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">&dagger;</span>
+          <div>
+            <a class="pkg" href="https://github.com/PacoteJS/pacote">@pacote</a>
+            <p>TypeScript utilities.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">&Dagger;</span>
+          <div>
+            <a class="pkg" href="https://signature-search.goblindegook.com/">@pacote/signature-search</a>
+            <p>Client-side, offline-first full-text search.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">&sect;</span>
+          <div>
+            <a href="https://github.com/goblindegook/skills">Skills</a>
+            <p>Skills for AI coding agents.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">&Vert;</span>
+          <div>
+            <a href="/ai-sdlc">AI-Augmented Software Development</a>
+            <p>Practices for working with AI coding agents, backed by evidence.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">&para;</span>
+          <div>
+            <a href="https://musarrif.com/">Muṣarrif</a>
+            <p>Arabic verb conjugator.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">**</span>
+          <div>
+            <a href="https://nowwetry.it/">Now We Try It My Way</a>
+            <p>Personal recipe collection.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark" aria-hidden="true">&dagger;&dagger;</span>
+          <div>
+            <a href="https://scopa.netlify.app/">Scopa</a>
+            <p>The Italian card game, in TypeScript and React.</p>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>
